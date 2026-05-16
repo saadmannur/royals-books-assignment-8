@@ -1,4 +1,5 @@
 import Banner from "@/components/homepage/Banner";
+import FeatureBooks from "@/components/homepage/FeatureBooks";
 import MarqueePage from "@/components/homepage/Marquee";
 
 export default function Home() {
@@ -6,15 +7,18 @@ export default function Home() {
     <div>
       <Banner></Banner>
       <MarqueePage></MarqueePage>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
-      <h2>Hello bangladesh</h2>
+      <FeatureBooks></FeatureBooks>
+      <div className="container mx-auto my-10">
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+        <h2>Hello bangladesh</h2>
+      </div>
     </div>
   );
 }
