@@ -18,7 +18,7 @@ const FeatureBooks = async () => {
                     <p className='text-[#036280] text-sm hidden md:block'>Books preserve knowledge and stories that help us learn, think critically, and explore new worlds beyond our own experience.</p>
                 </div>
                 <Link href={"/allbooks"}>
-                    <button className='flex items-center md:gap-4 font-semibold border p-1 md:p-3 rounded-full border-gray-500 border-dotted text-[#036280]'><span>Explore More</span> <FaArrowRight></FaArrowRight> </button>
+                    <button className='flex items-center md:gap-4 font-semibold border p-1 md:p-3 rounded-full border-gray-500 border-dotted text-[#036280] cursor-pointer'><span>Explore More</span> <FaArrowRight></FaArrowRight> </button>
                 </Link>
             </div>
             <p className='text-[#036280] text-sm md:hidden text-center'>Books preserve knowledge and stories that help us learn, think critically, and explore new worlds beyond our own experience.</p>

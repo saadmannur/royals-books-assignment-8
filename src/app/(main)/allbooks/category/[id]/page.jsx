@@ -1,19 +1,20 @@
 import AllBooksRight from '@/components/allBooksSection/AllBooksRight';
 import LeftSideBar from '@/components/allBooksSection/LeftSideBar';
-import { getAllBooks, getCategories } from '@/lib/data';
+import { getAllBooks, getBooksByCategory, getCategories } from '@/lib/data';
 import React from 'react';
 
-const AllBooks = async() => {
+const BooksCategoryPage = async ({ params }) => {
+
+    const { id } = await params;
 
     const categories = await getCategories();
-    console.log(categories);
-
-    const allBooks = await getAllBooks();
+    
+        const allBooks = await getBooksByCategory(id);
 
     return (
         <div className='grid grid-cols-15 container mx-auto md:p-10'>
             <div className='col-span-3'>
-                <LeftSideBar categories={categories}  isActive={'1'}></LeftSideBar>
+                <LeftSideBar categories={categories} isActive={id}></LeftSideBar>
             </div>
             <div className='col-span-12'>
                 <AllBooksRight allBooks={allBooks}></AllBooksRight>
@@ -22,4 +23,4 @@ const AllBooks = async() => {
     );
 };
 
-export default AllBooks;
+export default BooksCategoryPage;
