@@ -21,7 +21,7 @@ const Banner = () => {
                         alt='banner image'
                         width={500}
                         height={300}
-                        className='w-full h-full flex items-center justify-center '
+                        className='w-full h-full flex items-center justify-center animate__animated animate__bounce'
                     ></Image>
                 </div>
             </div>
