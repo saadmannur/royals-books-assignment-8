@@ -1,3 +1,4 @@
+import DetailsButton from '@/components/detailsButton/DetailsButton';
 import { getBooksDetails } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,17 +26,11 @@ const BooksDetailsPage = async ({ params }) => {
 
                 <p className='text-xl font-semibold'>Author: <span className='text-gray-500'>{author}</span></p>
 
-                <p className='text-xl font-semibold'>Category: <span className='text-gray-500'>{category}</span></p>
-
                 <p className='text-xl font-semibold'>Description: <span className='text-gray-500'>{description}</span></p>
 
                 <p className='text-xl font-semibold'>Available Quantity: <span className='text-gray-500'>{available_quantity} copies left</span></p>
 
-                <div className='flex justify-center items-center pt-5 '>
-                    <Link href={"/allbooks"}>
-                        <button className='btn text-xl bg-[#012e4a] text-white'>See All Books</button>
-                    </Link>
-                </div>
+                <DetailsButton title={title}></DetailsButton>
             </div>
         </div>
     );

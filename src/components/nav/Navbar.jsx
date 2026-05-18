@@ -3,6 +3,7 @@ import React from 'react';
 import books from "@/assets/book.png"
 import Image from 'next/image';
 import NavLinks from './NavLinks';
+import NavBtn from './NavBtn';
 
 const Navbar = () => {
     return (
@@ -42,7 +43,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <NavBtn></NavBtn>
                 </div>
             </div>
         </div>
