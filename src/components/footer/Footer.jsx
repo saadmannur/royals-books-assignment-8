@@ -15,7 +15,7 @@ import { SiFampay } from 'react-icons/si';
 const Footer = () => {
     return (
         <div>
-            <div className='bg-[#012e4a] text-white p-5 md:p-0'>
+            <div className='bg-[#012e4a] text-white p-5 md:p-3'>
                 <div className='container mx-auto py-10'>
                     <div className='border-b pb-5 border-gray-400'>
                         <h2 className='text-4xl font-bold text-center'>Contract US</h2>

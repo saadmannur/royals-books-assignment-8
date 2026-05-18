@@ -4,7 +4,7 @@ import React from 'react';
 
 const FeaturedRender = ({ book }) => {
     // console.log(book);
-    const { image_url, author, title } = book;
+    const { image_url, author, title, id } = book;
     return (
         <div className='h-full flex flex-col'>
             <div className='bg-base-300 py-2 rounded-t-xl'>
@@ -22,7 +22,7 @@ const FeaturedRender = ({ book }) => {
                     <p className='text-sm text-gray-500'>Author: {author}</p>
                 </div>
                 <div className=' mt-auto'>
-                    <Link href={""}>
+                    <Link href={`/allbooks/details/${id}`}>
                         <button className='btn bg-[#036280] text-white w-full'>View Details</button>
                     </Link>
                 </div>

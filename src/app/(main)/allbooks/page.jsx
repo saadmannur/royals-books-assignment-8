@@ -6,7 +6,7 @@ import React from 'react';
 const AllBooks = async() => {
 
     const categories = await getCategories();
-    console.log(categories);
+    // console.log(categories);
 
     const allBooks = await getAllBooks();
 

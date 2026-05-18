@@ -21,3 +21,9 @@ export const getBooksByCategory = async (id) => {
     const data = await res.json();
     return data
 };
+
+export const getBooksDetails = async (id) => {
+    const res = await fetch(`https://make-a-json-server-for-assignmrnt-8.onrender.com/books/${id}`);
+    const data = await res.json();
+    return data
+};
