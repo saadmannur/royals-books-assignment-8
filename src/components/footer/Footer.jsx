@@ -94,7 +94,7 @@ const Footer = () => {
                             <h2 className='text-2xl font-semibold mb-5'>Newsletter</h2>
                             <p className='text-sm mb-5'>Sign up to searing weekly newsletter <br /> to get the latest updates.</p>
                             <Link href={"/register"}>
-                                <button className='btn btn-primary'>Sign Up</button>
+                                <button className='btn bg-[#036280]'>Register</button>
                             </Link>
                         </div>
                     </div>

@@ -5,7 +5,7 @@ import React from 'react';
 const BooksCard = ({ book }) => {
     const { image_url, author, title, id } = book;
     return (
-        <div className='h-full flex flex-col animate__animated animate__bounce'>
+        <div className='h-full flex flex-col'>
             <div className='bg-base-300 py-2 rounded-t-xl'>
                 <Image
                     src={image_url}
