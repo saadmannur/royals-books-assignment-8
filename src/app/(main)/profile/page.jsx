@@ -1,13 +1,38 @@
 "use client"
-import MarqueePage from '@/components/homepage/Marquee';
+import UpdateProfile from '@/components/updateProfile/UpdateProfile';
 import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 
 const ProfilePage = () => {
 
     const { data } = authClient.useSession();
-    const user = data?.user;
+
+    const [profile, setProfile] = useState(null);
+
+    useEffect(()=>{
+        if(data?.user){
+            setProfile(data.user)
+        }
+    }, [data])
+
+    // const user = data?.user;
+    // console.log(user);
+
+    const handleLoginFunc = (formData) => {
+        const updateUser = {
+            ...profile,
+            name: formData.name,
+            email: formData.email,
+            image: formData.photo
+        }
+        setProfile(updateUser)
+    }
+
+    if (!profile) {
+        return <span className="loading loading-spinner loading-md"></span>
+    }
 
 
     return (
@@ -16,11 +41,11 @@ const ProfilePage = () => {
                 <h2 className='text-center text-3xl font-bold text-[#012e4a]'>Your Profile Information</h2>
                 <div>
                     <Image
-                        src={user?.image}
+                        src={profile.image}
                         alt="something"
                         width={200}
                         height={200}
-                        className='rounded-full mx-auto'
+                        className='rounded-full mx-auto w-[200] h-[200]'
                     ></Image>
                 </div>
                 <div className='flex justify-center items-center gap-5'>
@@ -29,12 +54,12 @@ const ProfilePage = () => {
                         <p>Email:</p>
                     </div>
                     <div className='space-y-2'>
-                        <h2>{user?.name}</h2>
-                        <p>{user?.email}</p>
+                        <h2>{profile?.name}</h2>
+                        <p>{profile?.email}</p>
                     </div>
                 </div>
                 <div className='text-center my-8'>
-                    <button className='btn bg-[#012e4a] text-white'>Update Profile</button>
+                    <UpdateProfile handleLoginFunc={handleLoginFunc}></UpdateProfile>
                 </div>
             </div>
         </div>
