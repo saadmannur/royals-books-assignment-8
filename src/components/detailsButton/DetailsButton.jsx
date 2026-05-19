@@ -1,10 +1,20 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
+import { redirect } from 'next/navigation';
 import React from 'react';
 import { toast } from 'react-toastify';
 
 const DetailsButton = ({ title }) => {
 
-    const handleBorrowBtn = () => toast.success(`${title} borrowed successfully`)
+    const { data } = authClient.useSession();
+    // console.log(data);
+
+    const handleBorrowBtn = () => {
+        if(!data){
+            redirect("/login")
+        }
+        toast.success(`${title} borrowed successfully`);
+    }
 
     return (
         <div className='flex justify-center items-center pt-5 '>
