@@ -1,6 +1,6 @@
 1. The name of my project is Royals Books. It is a books library.
 
-2. Live Url:
+2. Live Url: https://royals-books-assignment-8.vercel.app
 
 3. The key feature of my project are lots of books with details, visible user info, update user info, all books section have search bar for getting specific book , some author info, a marquee that shows offer info, a contract section in footer and fully responsive.
 
