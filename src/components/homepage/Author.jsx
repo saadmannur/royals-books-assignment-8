@@ -58,7 +58,7 @@ const Author = () => {
                         ></Image>
                     </div>
                     <div className='text-center border-2 m-5 p-3 border-dotted border-[#012e4a]'>
-                        <h2 className='font-bold text-[#012e4a] text-xl'>Agatha Christie</h2>
+                        <h2 className='font-bold text-[#012e4a] text-xl'>Agatha </h2>
                         <p className='text-[#036280] text-sm mt-2'>Published Books: 85</p>
                     </div>
                 </div>
