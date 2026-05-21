@@ -17,7 +17,7 @@ const AllBooks = async ({ searchParams }) => {
     )
 
     return (
-        <div className='grid grid-cols-15 container mx-auto md:p-10'>
+        <div className='grid grid-cols-15 container mx-auto md:p-10 bg-base-100'>
             <div className='col-span-3'>
                 <LeftSideBar categories={categories} isActive={'1'}></LeftSideBar>
             </div>

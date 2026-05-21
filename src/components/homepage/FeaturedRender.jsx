@@ -16,7 +16,7 @@ const FeaturedRender = ({ book }) => {
                     className='w-auto h-60 mx-auto shadow-xl'
                 ></Image>
             </div>
-            <div className='border-x border-b p-3 border-gray-300 rounded-b-xl flex flex-col flex-1 space-y-5'>
+            <div className='border-x border-b p-3 border-gray-300 rounded-b-xl flex flex-col flex-1 space-y-5 bg-white'>
                 <div className='flex-1'>
                     <h2 className='text-xl font-semibold'>{title}</h2>
                     <p className='text-sm text-gray-500'>Author: {author}</p>

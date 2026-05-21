@@ -11,7 +11,7 @@ const FeatureBooks = async () => {
 
     return (
         <div className='container mx-auto my-10 px-2 md:px-0'>
-            <div className='flex justify-between items-center'>
+            <div className='flex justify-between items-center m-5'>
                 <div className='hidden md:block'></div>
                 <div className='text-center space-y-5'>
                     <h2 className='text-2xl md:text-5xl font-semibold text-[#012e4a]'>Featured Books</h2>
@@ -22,7 +22,7 @@ const FeatureBooks = async () => {
                 </Link>
             </div>
             <p className='text-[#036280] text-sm md:hidden text-center'>Books preserve knowledge and stories that help us learn, think critically, and explore new worlds beyond our own experience.</p>
-            <div className='md:grid grid-cols-3 lg:grid-cols-4 m-5 md:m-10 md:gap-10 space-y-5 md:space-y-0'>
+            <div className='md:grid grid-cols-3 lg:grid-cols-4 m-5 md:gap-10 space-y-5 md:space-y-0'>
                 {
                     featuredBooks.map(book => <FeaturedRender key={book.id} book={book}></FeaturedRender>)
                 }
